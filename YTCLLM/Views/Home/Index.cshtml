@@ -1,0 +1,28 @@
+﻿@using YTCLLM.Controllers
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_FrontLayout.cshtml";
+}
+@section customStyle{
+   @Styles.Render("~/Content/css/coverPage")
+}
+
+
+
+<div class="cover-container">
+    <div class="inner cover">
+        <!--start for front layout-->
+        <h2 class="cover-heading" ></h2>
+
+        <p class="lead" style="font: italic 24px Georgia, serif;">"The Tallest Oak In The Forest Was Once Just a Little Nut Held to The Ground"</p>
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Register", "Register", "Account", null, new {@class = "btn btn-lg btn-primary"})
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Log In", "Login", "Account", null, new {@class = "btn btn-lg btn-primary"})
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Demo", "Demo", "AccountPage", null, new {@class = "btn btn-lg btn-primary"})
+    </div>
+</div>

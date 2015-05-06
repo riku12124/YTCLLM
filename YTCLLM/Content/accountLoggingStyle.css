@@ -1,0 +1,17 @@
+﻿@media (min-width: 768px) {
+  .site-wrapper-inner {
+    max-width: 730px;
+  }
+}
+
+.well {
+	padding: 30px;
+}
+
+.site-wrapper {
+	padding-top: 50px;
+}
+
+.site-wrapper-inner {
+	display: block;
+}

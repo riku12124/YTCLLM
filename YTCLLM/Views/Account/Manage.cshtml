@@ -1,0 +1,38 @@
+﻿
+@model YTCLLM.Models.UserProfileLocalPassword
+
+@{
+    ViewBag.Title = "Manage Account";
+}
+@section customStyle
+{
+    @Styles.Render("~/Content/css/accountLogging")
+}
+<div class="well center-block">
+    <hgroup class="title">
+        <h1>@ViewBag.Title.</h1>
+    </hgroup>
+
+    <p class="message-success">@ViewBag.StatusMessage</p>
+
+    <p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+
+    @if (ViewBag.HasLocalPassword)
+    {
+        @Html.Partial("_ChangePasswordPartial")
+    }
+    else
+    {
+        @Html.Partial("_SetPasswordPartial")
+    }
+
+    @if (ViewBag.HasLocalPassword)
+    {
+       @Html.Action("GetUserProfile", "Account")
+    }
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

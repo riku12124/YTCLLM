@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCLLM", "YTCLLM\YTCLLM.csproj", "{ED561614-C270-418A-88BC-99FB7580EC3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCLLM.Tests", "YTCLLM.Tests\YTCLLM.Tests.csproj", "{066AA1BB-587F-49C9-8A8F-51EC9DC75CC5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://chadalanmorton.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = YTCLLM.Tests\\YTCLLM.Tests.csproj
+		SccProjectName1 = YTCLLM.Tests
+		SccLocalPath1 = YTCLLM.Tests
+		SccProjectUniqueName2 = YTCLLM\\YTCLLM.csproj
+		SccProjectName2 = YTCLLM
+		SccLocalPath2 = YTCLLM
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED561614-C270-418A-88BC-99FB7580EC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED561614-C270-418A-88BC-99FB7580EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED561614-C270-418A-88BC-99FB7580EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED561614-C270-418A-88BC-99FB7580EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066AA1BB-587F-49C9-8A8F-51EC9DC75CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066AA1BB-587F-49C9-8A8F-51EC9DC75CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066AA1BB-587F-49C9-8A8F-51EC9DC75CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066AA1BB-587F-49C9-8A8F-51EC9DC75CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

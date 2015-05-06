@@ -1,0 +1,178 @@
+﻿@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+
+}
+
+
+<script type="text/javascript" >
+    
+    function postOutput()
+    {
+        var postInput = document.getElementById("post").value;
+       
+       
+            //variable that will hold the post for which all the user's blog info is stored..eg
+               var displayPost =
+                '<div class="row" >' +
+                '<br>' +
+                '<div class="col-md-2 col-sm-3 text-center">' +
+                '</div>' +
+                '<div class="col-md-10 col-sm-9">' +
+                    '<div class="row">' +
+                        '<div class="col-xs-9">' +
+                           '<form id ="form1" role="form">' +
+                                '<div class="form-group">' +
+                                    '<textarea class="form-control" readonly id="post" rows="5" cols="85" spellcheck="true" wrap="hard"  required>' + postInput + '</textarea>' +
+                                '</div>' +
+                            '</form>' +
+                            '<ul class="list-inline">' +
+                                '<li><a href="#">Just Now</a></li>' +
+                                '<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 0 Comments</a></li>' +
+                                '<li><a href="#"><i class="glyphicon glyphicon-share"></i> 0 Shares</a></li>' +
+                            '</ul>' +
+                        '</div>' +
+                        '<div class="col-xs-3"></div>' +
+                    '</div>' +
+                    '<br><br>' +
+                '</div>' +
+            '</div>';
+              
+        
+      
+
+        document.getElementById("displaypost").innerHTML += displayPost; //displays the blog variable into the html..eg
+        
+        document.getElementById('post').value = ""; //deletes what was in the textarea after user submits
+    } // end of postOutput()
+
+  </script>
+
+   
+
+ 
+    <!--Beginning of post-->
+    <div class="row" >
+        <br>
+        <div class="col-md-2 col-sm-3 text-center">
+            <a class="story-img" href="#"><img id="placeholder"  src="~//Images/PageImages/placeholderPic.jpg" style="width:100px;height:100px" class="img-circle"></a>
+        </div>
+        <div class="col-md-10 col-sm-9">
+            
+            <label> Enter Your First Leave</label>
+            <div class="row">
+                <div class="col-xs-9">
+                    
+                   <form id ="form1" role="form"><!--beginning of form that has textarea for user's post...eg-->
+                        <div class="form-group">                        
+                            <textarea class="form-control" id="post" rows=" 5" cols="85" spellcheck="true" wrap="hard" required></textarea> <!--Textbox for User Post-->
+                        </div>
+                    </form><!--End of form that has textarea for user's post..eg-->
+                    
+                    <p class="lead"><input id="Post" class="btn btn-default" readonly onclick="postOutput()" value="Post" />
+                  
+
+                </div>
+                <div class="col-xs-3"></div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <!--End of Post-->
+
+
+    <p id="displaypost"></p> <!--Where the post are placed-->
+
+
+
+
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <!-- end of Menu Toggle Script -->
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+
+
+
+        });
+
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40413119-1', 'bootply.com');
+        ga('send', 'pageview');
+    </script>
+
+
+    <style>
+        .ad {
+            position: absolute;
+            bottom: 70px;
+            right: 48px;
+            z-index: 992;
+            background-color: #f3f3f3;
+            position: fixed;
+            width: 155px;
+            padding: 1px;
+        }
+
+        .ad-btn-hide {
+            position: absolute;
+            top: -10px;
+            left: -12px;
+            background: #fefefe;
+            background: rgba(240,240,240,0.9);
+            border: 0;
+            border-radius: 26px;
+            cursor: pointer;
+            padding: 2px;
+            height: 25px;
+            width: 25px;
+            font-size: 14px;
+            vertical-align: top;
+            outline: 0;
+        }
+
+        .carbon-img {
+            float: left;
+            padding: 10px;
+        }
+
+        .carbon-text {
+            color: #888;
+            display: inline-block;
+            font-family: Verdana;
+            font-size: 11px;
+            font-weight: 400;
+            height: 60px;
+            margin-left: 9px;
+            width: 142px;
+            padding-top: 10px;
+        }
+
+            .carbon-text:hover {
+                color: #666;
+            }
+
+        .carbon-poweredby {
+            color: #6A6A6A;
+            float: left;
+            font-family: Verdana;
+            font-size: 11px;
+            font-weight: 400;
+            margin-left: 10px;
+            margin-top: 13px;
+            text-align: center;
+        }
+    </style>

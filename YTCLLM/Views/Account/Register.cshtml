@@ -1,0 +1,86 @@
+﻿@model YTCLLM.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+@section customStyle
+{
+    @Styles.Render("~/Content/css/accountLogging")
+}
+<div class="well center-block">
+    <hgroup class="center-block">
+        <h1 class="text-center">Register a new account</h1>
+    </hgroup>
+
+    @using (Html.BeginForm())
+    {
+        <h3 class="bg-danger">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+        </h3>
+
+        <div class="row">
+            <form>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UserName, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.UserName, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new {@class = "control-label"})
+                    @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new {@class = "control-label"})
+                    @Html.PasswordFor(m => m.ConfirmPassword, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NamePrefix, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.NamePrefix, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FirstName, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.FirstName, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LastName, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.LastName, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NameSuffix, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.NameSuffix, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.MiddleName, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.MiddleName, new {@class = "form-control"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Gender, new { @class = "control-label" })
+                    @Html.RadioButtonFor(m => m.Gender, "M") Male
+                    @Html.RadioButtonFor(m => m.Gender, "F") Female
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.DOB, new {@class = "control-label"})
+                    @Html.TextBox("DOB", "", new { @id = "date-picker" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new {@class = "control-label"})
+                    @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+                </div>
+            </form>
+            <span class="center-block text-center">
+                <input type="submit" value="Register" class="btn btn-lg btn-primary" />
+            </span>
+        </div> 
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('#date-picker').datepicker();
+        })
+    </script>
+}

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta lang="english"/>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @RenderSection("customStyle", required:false)        
+    </head>
+    <body>
+        <header>
+            @RenderPage("~/Views/Shared/_LoginBar.cshtml")
+        </header>
+    <div class="content">
+        <div class="container">
+            <div class="site-wrapper">
+                <div class="site-wrapper-inner">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

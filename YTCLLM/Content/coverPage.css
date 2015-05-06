@@ -1,0 +1,72 @@
+﻿html,
+body {
+  height: 100%;
+  background-image: url("/Images/PageImages/NutshellLogo.png") ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  
+  background-color: #ffffff;
+
+
+}
+body {
+ 
+  color: #010101;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+.btn-primary {
+    
+    
+     margin-top: 20%;
+    color: #fff;
+	background-color: #D23731;
+	border-color: #27B1ED;
+}
+
+.btn-primary:hover {
+    background-color: #838180;
+    border-color: #D8262E;
+	color: #FFF;
+} 
+
+.navbar-default {
+	background-image: linear-gradient(to bottom,#FFFFFF 0,#D7D7D7 100%)
+}
+
+.navbar-default .navbar-brand {
+	color: #4F4F4F
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
+
+
+
+
+body {
+	 height: 100%;
+	 height: -webkit-calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+    height: calc(100% - 50px);
+}

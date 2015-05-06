@@ -1,0 +1,50 @@
+﻿@model YTCLLM.Models.UserProfile
+@if (Model != null)
+{
+    
+}
+
+
+<div class="row">
+    <form>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.NamePrefix, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.NamePrefix, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LastName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.NameSuffix, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.NameSuffix, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MiddleName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Gender, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DOB, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.DOB, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </form>
+    <span class="center-block text-center">
+        <input type="submit" value="Register" class="btn btn-lg btn-primary" />
+    </span>
